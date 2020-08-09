@@ -1,69 +1,93 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="/styles.css" rel="stylesheet">
-    <title>Job Veldhuis</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174987273-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174987273-1', {'anonymize-ip': true});
+    </script>
+    <!-- Website meta -->
+    <title>Job Veldhuis - Personal Website</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Welcome to the personal website of Job Veldhuis." />
+    <meta name="author" content="Job Veldhuis" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Functional stuff -->
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        let shown = false;
+        function switchZen() {
+            if (shown === true) {
+                document.getElementById('zen').style.display = 'none';
+                document.getElementById('zen-switcher').innerHTML = 'Click to read';
+                shown = false;
+            }
+            else
+            {
+                document.getElementById('zen').style.display = 'flex';
+                document.getElementById('zen-switcher').innerHTML = 'Click to close';
+                shown = true
+            }
+        }
+    </script>
 </head>
 <body>
-<div class="container-fluid">
-    <div id="intro">
-        <div id="intro-text">
-            <h1>Job Veldhuis.</h1>
-            Philosopher, author,<br>
-            communication strategist.
+    <div class="container">
+        <h1>Job Veldhuis.</h1>
+        <hr/>
+        <div id="who-am-i">
+            <h2>about.</h2>
+            <p>When I first got into programming, I learned about the Zen of Python. Part of it still sums up my idea of not only programming, but life in general.</p>
+            <button id="zen-switcher" onclick="switchZen()">Click to read</button>
+            <div id="zen" style="display: none;">
+                <p>
+                    Simple is better than complex.<br>
+                    Complex is better than complicated.<br>
+                    <span class="quote-attribution">- Tim Peters</span>
+                </p>
+            </div>
+            <noscript>
+                <div id="zen">
+                    <p>
+                        Simple is better than complex.<br>
+                        Complex is better than complicated.<br>
+                        <span class="quote-attribution">- Tim Peters</span>
+                    </p>
+                </div>
+            </noscript>
+            <p>I tend to see myself as an optimistic, hard working individual who looks out for the people around him. Most importantly, I have lots of interests in different fields. I am proud of that fact. It makes me who I am.</p>
+        </div>
+        <div id="projects">
+            <h2>projects.</h2>
+            <ul>
+                <li><a href="https://github.com/jobveldhuis/jackman">Jackman, static website generator</a></li>
+                <li><a href="https://github.com/jobveldhuis/python-qr-code-generator-api">qr-code-generator.com API wrapper</a></li>
+                <li><a href="https://jobveldhuis.github.io/1-pixel-weelde/">Één pixel weelde</a></li>
+            </ul>
+        </div>
+        <div id="books">
+            <h2>books.</h2>
+            <ul>
+                <li><a href="https://www.bol.com/nl/f/inspecteur-vos/9200000120774059/">Inspecteur Vos</a></li>
+                <li><a href="https://www.bol.com/nl/p/de-laatste-dag/9300000007440350/">De Laatste Dag</a></li>
+            </ul>
+        </div>
+        <div id="contact">
+            <h2>contact.</h2>
+            <p>I'm always open to a good conversation!</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/jobveldhuis/">Digital resume</a></li>
+                <li><a href="https://github.com/jobveldhuis/">Github repositories</a></li>
+                <li><a href="mailto:job@baukefrederik.me">Send me an e-mail</a></li>
+            </ul>
         </div>
     </div>
-    <div id="current">
-        <h2>Currently working as</h2>
-        <ul>
-            <li>
-                <h3><a href="https://EetSmakelijk.nl">Marketing and Communications Manager at EetSmakelijk.nl</a></h3>
-                <p>Local food delivery app, aimed at making the delivery business a fairer place.</p>
-            </li>
-            <li>
-                <h3><a href="https://sluijmermultimedia.com">Marketing Consultant at Sluijmer Multimedia</a></h3>
-                <p>Consulting clients on how to market their products and company.</p>
-            </li>
-            <li>
-                <h3><a href="https://www.maskatte.com">Owner at Maskatte</a></h3>
-                <p>Designing and shipping exclusive, simplistic streetwear with a premium feel.</p>
-            </li>
-            <li>
-                <h3><a href="https://www.hoekstraenveldhuis.nl">Partner at Hoekstra & Veldhuis B.V.</a></h3>
-                <p>Creative agency specialized in all kinds of creative writing.</p>
-            </li>
-        </ul>
-        <p class="extra">For full work history, please refer to my <a href="/resume.html">digital resume &rarr;</a></p>
-    </div>
-    <div id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li>
-                <h3><a href="https://www.bol.com/nl/p/inspecteur-vos/9200000120774060/">Inspecteur Vos</a></h3>
-                <p>Dutch detective, published in 2019.</p>
-            </li>
-            <li>
-                <h3><a href="https://www.bol.com/nl/p/de-laatste-dag/9300000007440350/">De Laatste Dag</a></h3>
-                <p>Dutch detective, published in 2020.</p>
-            </li>
-        </ul>
-        <p class="extra">For other publications, please refer to the <a href="/publications.html">list of publications &rarr;</a></p>
-    </div>
-    <div id="connect">
-        <h2>Connect</h2>
-        <ul>
-            <li><h3><a href="mailto:job@baukefrederik.me">Email</a></h3></li>
-            <li><h3><a href="https://twitter.com/baukefrederik">Twitter</a></h3></li>
-            <li><h3><a href="https://instagram.com/baukefrederik">Instagram</a></h3></li>
-            <li><h3><a href="https://www.linkedin.com/in/jobveldhuis/">LinkedIn</a></h3></li>
-            <li><h3><a href="https://www.reddit.com/u/halfbalcony">Reddit</a></h3></li>
-        </ul>
-    </div>
-</div>
-<div id="fade"></div>
+    <footer>
+        ⚡ Someday, this website will be generated by <a href="https://github.com/jobveldhuis/jackman">Jackman</a>.
+    </footer>
+
 </body>
 </html>

@@ -1,79 +1,98 @@
-html
+html, body
 {
     height: 100%;
+    margin: 0;
 }
 
 body
 {
-    height: 100%;
-    background: #1A1A1D;
-    font-family: 'Open Sans', sans-serif;
-    color: #FFFFFF;
-    font-size: 16px;
-
-}
-
-ul
-{
-    list-style-type: none;
-    margin-top: 20px;
-    padding: 0;
-}
-li
-{
-    margin-top: 15px;
-}
-p
-{
-    margin: 0;
-    color: #6e6e73;
-}
-
-.container-fluid
-{
-    max-width: 800px;
-    height: 100%;
-}
-#intro
-{
     display: flex;
-    min-height: calc(100% - 400px);
-    font-size: 24px;
-    color: #F08CAE;
-}
-#intro-text
-{
-    margin: auto 0;
+    flex-direction: column;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    background-color: #efefef;
+    color: #383e56;
+    font-size: 20px;
+    font-weight: 500;
 }
 h1
 {
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 40px;
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 h2
 {
-    font-size: 22px;
-    margin-top: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #f5b971;
+    margin: 0;
 }
-
-h3
+p
 {
-    font-size: 18px;
-    margin-bottom: 0;
+    margin-top: 10px;
 }
 a
 {
-    color: #7765E3;
+    text-decoration: none;
+    color: #ff8080;
 }
-
-#connect
+button
 {
-    padding-bottom: 40px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ff8080;
+    cursor: pointer;
+    outline: none;
 }
-.extra
+a:hover
 {
-    font-style: italic;
-
+    color: #ef6c57;
+}
+hr
+{
+    border: 1px dashed #000;
+    width: 100%;
+    margin: 0 auto 5% auto;
+}
+ul
+{
+    list-style-type: square;
+    color: #ff8080;
+    line-height: 1.5;
+}
+.container
+{
+    flex: 1 0 auto;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 500px;
+}
+#zen
+{
+    color: #d291bc;
+}
+#zen p{
+    margin-top: 30px;
+}
+.quote-attribution
+{
+    color: #aaaaaa;
+    font-size: 20px;
+}
+#projects h2, #books h2, #contact h2
+{
+    margin-top: 30px;
+}
+footer
+{
+    font-size: 16px;
+    color: #aaaaaa;
+    margin: 0 auto;
+    flex-shrink: 0;
+    padding: 10px;
 }
